@@ -37,7 +37,7 @@ public class Pedidos implements Serializable {
   * @generated
   */
   @Temporal(TemporalType.DATE)
-  @Column(name = "datada_cadastro", nullable = true, unique = false, insertable=true, updatable=true)
+  @Column(name = "datada_cadastro", nullable = false, unique = false, insertable=true, updatable=true)
   private java.util.Date datada_cadastro;
   
   /**
@@ -55,7 +55,7 @@ public class Pedidos implements Serializable {
   /**
   * @generated
   */
-  @Column(name = "quantidade", nullable = true, unique = false, insertable=true, updatable=true)
+  @Column(name = "quantidade", nullable = false, unique = false, insertable=true, updatable=true)
   private java.lang.Integer quantidade;
   
   /**
