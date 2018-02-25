@@ -36,6 +36,7 @@ public class PedidosREST {
    */
   @RequestMapping(method = RequestMethod.POST)
   public Pedidos post(@Validated @RequestBody final Pedidos entity) throws Exception {
+	  System.out.println(entity.toString());
     return pedidosBusiness.post(entity);
   }
 

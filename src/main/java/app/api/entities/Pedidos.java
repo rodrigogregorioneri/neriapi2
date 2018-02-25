@@ -49,7 +49,7 @@ public class Pedidos implements Serializable {
   /**
   * @generated
   */
-  @Column(name = "numero_controle", nullable = true, unique = false, insertable=true, updatable=true)
+  @Column(name = "numero_controle", nullable = true, unique = true, insertable=true, updatable=true)
   private java.lang.Long numero_controle;
   
   /**
@@ -125,7 +125,11 @@ public class Pedidos implements Serializable {
    * @generated
    */
   public Pedidos setDatada_cadastro(java.util.Date datada_cadastro){
-    this.datada_cadastro = datada_cadastro;
+	if(datada_cadastro == null) {
+		this.datada_cadastro = new Date();
+	}else {
+		this.datada_cadastro = datada_cadastro;	
+	}
     return this;
   }
   
@@ -182,7 +186,11 @@ public class Pedidos implements Serializable {
    * @generated
    */
   public Pedidos setQuantidade(java.lang.Integer quantidade){
-    this.quantidade = quantidade;
+	if(quantidade == null) {
+		this.quantidade = 1;
+	}else {
+		this.quantidade = quantidade;	
+	}  
     return this;
   }
   

@@ -40,6 +40,7 @@ public class PedidosBusiness {
     // begin-user-code  
     // end-user-code  
     Pedidos result = repository.save(entity);
+    System.out.println(result.toString());
     // begin-user-code
     // end-user-code
     return result;
