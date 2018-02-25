@@ -37,8 +37,11 @@ public class PedidosBusiness {
    * @generated
    */
   public Pedidos post(final Pedidos entity) throws Exception {
-    // begin-user-code  
-    // end-user-code  
+    if(entity.getQuantidade() >= 5 &&  entity.getQuantidade() < 9) {
+    	entity.setValor(entity.getValor()-(entity.getValor() * 0.05));
+    }else if(entity.getQuantidade() >= 10) {
+    	entity.setValor(entity.getValor()-(entity.getValor() * 0.10));
+    }
     Pedidos result = repository.save(entity);
     System.out.println(result.toString());
     // begin-user-code

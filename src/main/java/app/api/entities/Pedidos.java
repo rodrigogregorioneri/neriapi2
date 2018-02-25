@@ -62,7 +62,7 @@ public class Pedidos implements Serializable {
   * @generated
   */
   @Column(name = "valor", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.Long valor;
+  private double valor;
   
   /**
    * Construtor
@@ -199,17 +199,17 @@ public class Pedidos implements Serializable {
    * return valor
    * @generated
    */
-  public java.lang.Long getValor(){
+  public double getValor(){
     return this.valor;
   }
   
   /**
    * Define valor
-   * @param valor valor
+   * @param d valor
    * @generated
    */
-  public Pedidos setValor(java.lang.Long valor){
-    this.valor = valor;
+  public Pedidos setValor(double d){
+    this.valor = d;
     return this;
   }
   
