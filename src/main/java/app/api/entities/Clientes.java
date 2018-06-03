@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.*;
 
 
 @Entity
-@Table(name = "\"CLIENTES\"")
+@Table(name = "\"clientes\"")
 @XmlRootElement
 public class Clientes implements Serializable {
 
@@ -22,6 +22,10 @@ public class Clientes implements Serializable {
   
   @Column(name = "sobrenome", nullable = true, unique = false, insertable=true, updatable=true)
   private java.lang.String sobrenome;
+  
+  @ManyToOne
+  @JoinColumn(name="fk_pedidos", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+  private Pedidos pedidos;
   
   public Clientes(){
   }
@@ -53,6 +57,16 @@ public class Clientes implements Serializable {
     this.sobrenome = sobrenome;
     return this;
   }
+  
+	public Pedidos getPedidos() {
+		return this.pedidos;
+	}
+	
+	public Pedidos setPedidos(Pedidos pedidos) {
+		this.pedidos = pedidos;
+		return this.pedidos;
+	}
+  
   
   @Override
   public boolean equals(Object obj) {

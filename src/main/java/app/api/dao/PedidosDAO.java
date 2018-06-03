@@ -9,7 +9,6 @@ import org.springframework.data.repository.query.*;
 import org.springframework.transaction.annotation.*; 
 
 @Repository("PedidosDAO")
-@Transactional
 public interface PedidosDAO extends JpaRepository<Pedidos, java.lang.String> {
 
   

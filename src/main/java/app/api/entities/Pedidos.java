@@ -18,9 +18,7 @@ public class Pedidos implements Serializable {
   private java.lang.String id = UUID.randomUUID().toString().toUpperCase();
   
   
-  @ManyToOne
-  @JoinColumn(name="fk_produtos", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
-  private Clientes produtos;
+  
   
   /**
   * @generated

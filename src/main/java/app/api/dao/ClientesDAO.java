@@ -24,7 +24,7 @@ public interface ClientesDAO extends JpaRepository<Clientes, java.lang.String> {
   @Query("select c from Clientes c")
   public Page<Clientes> list(Pageable pageable);
   
-  @Query("SELECT entity FROM Pedidos entity WHERE entity.produtos.id = :id")
+  @Query("SELECT entity FROM Pedidos entity WHERE entity.id = :id")
   public Page<Pedidos> findPedidos(@Param(value="id") java.lang.String id, Pageable pageable);
 
 }
